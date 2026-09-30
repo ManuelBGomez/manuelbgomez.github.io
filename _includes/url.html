@@ -1,0 +1,9 @@
+{%- comment -%}
+  Outputs a usable href: external URLs are kept as they are, paths inside the
+  repository get the site baseurl. Usage: {% include url.html href=some.path %}
+{%- endcomment -%}
+{%- if include.href contains '://' or include.href contains 'mailto:' -%}
+{{ include.href }}
+{%- else -%}
+{{ include.href | prepend: '/' | replace: '//', '/' | relative_url }}
+{%- endif -%}

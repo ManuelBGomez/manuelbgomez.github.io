@@ -1,0 +1,61 @@
+# =============================================================================
+#  EDUCATION & EXPERIENCE — two timelines, newest first
+#  end: leave empty or write "present" for current positions
+#  description is optional (Markdown allowed)
+# =============================================================================
+
+education:
+  - title: "PhD in Information Technology Research"
+    org: "Universidade de Santiago de Compostela"
+    url: "https://www.usc.gal/en/studies/doctoral-programme/engineering-and-architecture/doctoral-programme-information-technology-research"
+    start: 2024
+    end: present
+    description: "Thesis: Visual Multi Object Tracking with frequent occlusions. Advisors: Prof. Manuel Mucientes and Prof. Víctor M. Brea."
+
+  - title: "MSc in Computer Vision"
+    org: "Universidade de Santiago de Compostela, Universidade da Coruña, Universidade de Vigo and Universidade do Porto"
+    url: "https://imcv.eu/"
+    start: 2022
+    end: 2024
+
+  - title: "BSc in Computer Science"
+    org: "Universidade de Santiago de Compostela"
+    url: "https://www.usc.gal/en/studies/degrees/engineering-and-architecture/computer-science-degree"
+    start: 2018
+    end: 2022
+
+experience:
+  - title: "Predoctoral Researcher"
+    org: "CiTIUS — Centro Singular de Investigación en Tecnoloxías Intelixentes"
+    url: "https://citius.gal/en/"
+    start: January 2024
+    end: present
+    description: "FPU-funded PhD research on 'Visual Multi Object Tracking with frequent occlusions'."
+
+  - title: "Junior Researcher"
+    org: "CiTIUS — Centro Singular de Investigación en Tecnoloxías Intelixentes"
+    url: "https://citius.gal/en/"
+    start: January 2023
+    end: October 2023
+    description: "Research on Object Detection and Visual Object Tracking."
+
+  - title: "Research Internship"
+    org: "CiTIUS — Centro Singular de Investigación en Tecnoloxías Intelixentes"
+    url: "https://citius.gal/en/"
+    start: March 2022
+    end: May 2022
+    description: "Curricular Internship (BSc Degree in Computer Science): 'Development of video analytics systems using detection and tracking techniques'."
+
+  - title: "Research Intern"
+    org: "CiTIUS — Centro Singular de Investigación en Tecnoloxías Intelixentes"
+    url: "https://citius.gal/en/"
+    description: "Research on 'Object detection using few-shot techniques', funded by a Collaboration Grant (Spanish Ministry of Education)."
+    start: 2021
+    end: 2022
+
+  - title: "Research Intern"
+    org: "CiTIUS — Centro Singular de Investigación en Tecnoloxías Intelixentes"
+    url: "https://citius.gal/en/"
+    description: "Summer internship on 'Object detection in video with few examples'."
+    start: July 2021
+    end: July 2021

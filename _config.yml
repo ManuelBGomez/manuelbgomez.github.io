@@ -1,0 +1,74 @@
+# =============================================================================
+#  SITE SETTINGS
+#  When you save this file the preview restarts by itself (takes a few seconds;
+#  refresh the browser afterwards).
+# =============================================================================
+
+# Used for the browser tab, search engines and link previews.
+title: "Manuel Bendaña"
+description: "PhD student in computer vision: multi-object tracking, object detection and segmentation."
+lang: en
+
+# Public address of the site.
+#  - If the repository is named <github-username>.github.io → url: "https://<github-username>.github.io", baseurl: ""
+#  - Otherwise (project site) → url: "https://<github-username>.github.io", baseurl: "/<repository-name>"
+url: "https://manuelbgomez.github.io"
+baseurl: ""
+
+# Main colour of the site (links, highlights, buttons). Any CSS colour works.
+accent_color: "#2f5bd3"
+
+# How many news items are shown before the "Show more" button.
+news_limit: 5
+
+# -----------------------------------------------------------------------------
+#  HOME PAGE SECTIONS
+#  Order here = order on the page. Remove (or comment out) a block to hide it.
+#  nav: true → the section also appears in the top menu.
+#  Content for each section lives in the _data/ folder.
+# -----------------------------------------------------------------------------
+sections:
+  # News is hidden for now: uncomment these 3 lines to show it again (content: _data/news.yml)
+  # - id: news
+  #   title: News
+  #   nav: true
+  - id: research
+    title: Research interests
+    nav: true
+    nav_title: Research
+  - id: publications
+    title: Selected publications
+    nav: true
+    nav_title: Publications
+  - id: projects
+    title: Projects
+    nav: true
+  - id: experience
+    title: Education & experience
+    nav: true
+    nav_title: Experience
+  - id: talks
+    title: Talks & teaching
+    nav: true
+    nav_title: Talks
+  - id: awards
+    title: Awards & grants
+    nav: false
+
+# =============================================================================
+#  BUILD SETTINGS (you normally don't need to touch anything below)
+# =============================================================================
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - docker-compose.yml
+  - serve.sh
+  - scripts
+  - cv
+  - vendor

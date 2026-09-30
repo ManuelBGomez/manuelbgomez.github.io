@@ -1,0 +1,39 @@
+{%- if site.data.projects.size > 0 -%}
+<section id="{{ include.section.id }}" class="section reveal" data-spy>
+  <h2 class="section-title">{{ include.section.title }}</h2>
+  <div class="card-grid card-grid-wide">
+    {%- for pr in site.data.projects %}
+    <article class="card project-card">
+      <header class="project-head">
+        {%- if pr.logo %}<img class="project-logo" src="{% include url.html href=pr.logo %}" alt="" loading="lazy">
+        {%- else -%}
+          {%- comment -%} No logo: coloured tile with the acronym (text before "—" or ":"), or the initials of a long name. {%- endcomment -%}
+          {%- assign label = pr.short | default: "" -%}
+          {%- if label == "" -%}
+            {%- assign label = pr.name | split: " —" | first | split: ":" | first | strip -%}
+            {%- if label.size > 7 -%}
+              {%- assign words = label | split: " " -%}
+              {%- assign label = "" -%}
+              {%- for w in words limit: 3 %}{% assign ch = w | slice: 0 %}{% assign label = label | append: ch %}{% endfor -%}
+            {%- endif -%}
+          {%- endif %}
+        <span class="project-tile project-tile-{{ forloop.index0 | modulo: 4 }}{% if label.size > 4 %} is-long{% endif %}" aria-hidden="true">{{ label | upcase }}</span>
+        {%- endif %}
+        <div>
+          <h3>{% if pr.url %}<a href="{{ pr.url }}" target="_blank" rel="noopener">{{ pr.name }}</a>{% else %}{{ pr.name }}{% endif %}</h3>
+          <p class="project-meta">
+            {%- if pr.role %}<span><i class="fa-regular fa-user" aria-hidden="true"></i> {{ pr.role }}</span>{% endif -%}
+            {%- if pr.start %}<span><i class="fa-regular fa-calendar" aria-hidden="true"></i> {% include period.html start=pr.start end=pr.end %}</span>{% endif -%}
+          </p>
+        </div>
+      </header>
+      {%- if pr.description %}<p>{{ pr.description }}</p>{% endif %}
+      {%- if pr.funder %}<p class="project-funder"><i class="fa-solid fa-landmark" aria-hidden="true"></i> {{ pr.funder }}</p>{% endif %}
+      {%- if pr.tags %}
+      <ul class="tags">{% for t in pr.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      {%- endif %}
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif -%}

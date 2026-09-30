@@ -1,0 +1,22 @@
+# Local preview of the site. Start it with: bash serve.sh (see README.md).
+services:
+  site:
+    image: ruby:3.3
+    # Run as your own user so generated files are not owned by root.
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    working_dir: /site
+    environment:
+      HOME: /tmp
+      JEKYLL_ENV: development
+      LIVERELOAD_PORT: ${LIVERELOAD_PORT:-35729}
+    command: sh scripts/dev-server.sh
+    ports:
+      - "127.0.0.1:${PORT:-4000}:4000"
+      - "127.0.0.1:${LIVERELOAD_PORT:-35729}:${LIVERELOAD_PORT:-35729}"
+    volumes:
+      - .:/site
+      # Installed gems live in a Docker volume (fast, survives restarts).
+      - gems:/usr/local/bundle
+
+volumes:
+  gems:

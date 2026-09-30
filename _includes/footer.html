@@ -1,0 +1,7 @@
+{%- assign p = site.data.profile -%}
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ p.name }}{% if p.email %} · <a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</p>
+    <p class="muted">Last updated {{ site.time | date: "%B %Y" }}</p>
+  </div>
+</footer>

@@ -1,0 +1,23 @@
+{%- comment -%}
+  Renders a row of small link buttons (PDF, DOI, Code, ...).
+  Usage: {% include links.html links=item.links %}
+{%- endcomment -%}
+{%- assign keys = "pdf,arxiv,doi,code,data,slides,poster,video,website" | split: "," -%}
+{%- for key in keys -%}
+  {%- assign href = include.links[key] -%}
+  {%- if href -%}
+    {%- case key -%}
+      {%- when "pdf" -%}{%- assign label = "PDF" -%}{%- assign icon = "fa-regular fa-file-pdf" -%}
+      {%- when "arxiv" -%}{%- assign label = "arXiv" -%}{%- assign icon = "ai ai-arxiv" -%}
+      {%- when "doi" -%}{%- assign label = "DOI" -%}{%- assign icon = "ai ai-doi" -%}
+        {%- unless href contains '://' -%}{%- assign href = href | prepend: "https://doi.org/" -%}{%- endunless -%}
+      {%- when "code" -%}{%- assign label = "Code" -%}{%- assign icon = "fa-solid fa-code" -%}
+      {%- when "data" -%}{%- assign label = "Data" -%}{%- assign icon = "fa-solid fa-database" -%}
+      {%- when "slides" -%}{%- assign label = "Slides" -%}{%- assign icon = "fa-solid fa-person-chalkboard" -%}
+      {%- when "poster" -%}{%- assign label = "Poster" -%}{%- assign icon = "fa-regular fa-image" -%}
+      {%- when "video" -%}{%- assign label = "Video" -%}{%- assign icon = "fa-solid fa-play" -%}
+      {%- when "website" -%}{%- assign label = "Website" -%}{%- assign icon = "fa-solid fa-globe" -%}
+    {%- endcase -%}
+<a class="chip-link" href="{% include url.html href=href %}" target="_blank" rel="noopener"><i class="{{ icon }}" aria-hidden="true"></i>{{ label }}</a>
+  {%- endif -%}
+{%- endfor -%}

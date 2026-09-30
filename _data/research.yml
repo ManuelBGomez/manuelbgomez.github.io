@@ -1,0 +1,29 @@
+# =============================================================================
+#  RESEARCH INTERESTS
+#  intro:     optional sentence shown above the cards (Markdown allowed)
+#  interests: the cards. Fields:
+#    icon:     any free Font Awesome icon → https://fontawesome.com/search?ic=free
+#    featured: true → full-width highlighted card (use it for your main topic)
+#    label:    small tag on the card, e.g. "PhD topic"
+# =============================================================================
+
+intro: "My main research interest is **deep learning applied to Computer Vision**, with a focus on **Multiple Object Tracking (MOT)**. However, I also have experience in related topics such as **object detection** and **object segmentation**."
+
+interests:
+  - title: "Multiple Object Tracking (MOT)"
+    icon: "fa-solid fa-route"
+    featured: true
+    label: "PhD topic"
+    description: "Following multiple objects through video sequences while keeping each one's identity consistent over time."
+
+  - title: "Object detection"
+    icon: "fa-solid fa-vector-square"
+    description: "Locating and classifying objects in images and video. Tracking-by-Detection (TbD) approaches for MOT rely on object detection as a first step to find the objects to track."
+
+  - title: "Object segmentation"
+    icon: "fa-solid fa-draw-polygon"
+    description: "Delineating the exact shape of each object at pixel level. Segmentation can be helpful to better locate objects in complex scenarios."
+
+  - title: "Deep learning"
+    icon: "fa-solid fa-brain"
+    description: "Neural network models underlie all my work, from detection and segmentation architectures to the feature extraction methods that describe each object's appearance."

@@ -1,0 +1,4 @@
+{%- comment -%} Prints "2024 – Present", "2023 – 2024" or "2025". {%- endcomment -%}
+{%- assign period_start = include.start -%}{%- assign period_end = include.end -%}
+{%- if period_end == nil or period_end == "" or period_end == "present" or period_end == "Present" -%}{%- assign period_end = "Present" -%}{%- endif -%}
+{%- if period_start -%}{%- if period_start == period_end -%}{{ period_start }}{%- else -%}{{ period_start }} – {{ period_end }}{%- endif -%}{%- endif -%}

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{%- comment -%}
+  Home page. Sections, their order and titles are configured in _config.yml
+  ("sections"); their content lives in the _data/ folder.
+{%- endcomment -%}
+{% include sections/about.html %}
+{% for section in site.sections %}
+  {% include sections/{{ section.id }}.html section=section %}
+{% endfor %}

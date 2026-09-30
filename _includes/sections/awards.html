@@ -1,0 +1,44 @@
+{%- if site.data.awards.size > 0 -%}
+{%- comment -%} Grouped by type (awards, then grants), each newest first. Content: _data/awards.yml {%- endcomment -%}
+{%- comment -%} Sort on the year as text so values like "2020 & 2021" work alongside plain numbers. {%- endcomment -%}
+{%- assign keys = "" | split: "" -%}
+{%- for a in site.data.awards -%}
+  {%- capture k %}{{ a.year }}#{{ forloop.index0 | prepend: "000" | slice: -3, 3 }}{% endcapture -%}
+  {%- assign keys = keys | push: k -%}
+{%- endfor -%}
+{%- assign keys = keys | sort | reverse -%}
+{%- assign sorted = "" | split: "" -%}
+{%- for k in keys -%}
+  {%- assign i = k | split: "#" | last | plus: 0 -%}
+  {%- assign sorted = sorted | push: site.data.awards[i] -%}
+{%- endfor -%}
+{%- assign groups = "award:Awards:fa-trophy,grant:Grants:fa-hand-holding-dollar" | split: "," -%}
+<section id="{{ include.section.id }}" class="section reveal" data-spy>
+  <h2 class="section-title">{{ include.section.title }}</h2>
+  {%- for g in groups %}
+  {%- assign parts = g | split: ":" -%}
+  {%- assign kind = parts[0] -%}
+  {%- assign items = "" | split: "" -%}
+  {%- for a in sorted -%}
+    {%- assign t = a.type | default: "award" | downcase -%}
+    {%- if t == kind %}{% assign items = items | push: a %}{% endif -%}
+  {%- endfor -%}
+  {%- if items.size > 0 %}
+  <div class="award-group">
+    <h3 class="col-title"><i class="fa-solid {{ parts[2] }} award-icon-{{ kind }}" aria-hidden="true"></i>{{ parts[1] }}</h3>
+    <ul class="awards">
+      {%- for a in items %}
+      <li>
+        <span class="award-year">{{ a.year }}</span>
+        <div>
+          <h4>{{ a.title }}</h4>
+          <p class="muted">{{ a.org }}{% if a.description %} — {{ a.description }}{% endif %}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endif -%}
+  {%- endfor %}
+</section>
+{%- endif -%}

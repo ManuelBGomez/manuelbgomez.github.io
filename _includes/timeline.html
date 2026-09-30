@@ -1,0 +1,10 @@
+<ol class="timeline">
+  {%- for it in include.items %}
+  <li class="timeline-item">
+    <span class="timeline-date">{% include period.html start=it.start end=it.end %}</span>
+    <h4>{{ it.title }}</h4>
+    <p class="timeline-org">{% if it.url %}<a href="{{ it.url }}" target="_blank" rel="noopener">{{ it.org }}</a>{% else %}{{ it.org }}{% endif %}</p>
+    {%- if it.description %}<div class="timeline-desc">{{ it.description | markdownify }}</div>{% endif %}
+  </li>
+  {%- endfor %}
+</ol>

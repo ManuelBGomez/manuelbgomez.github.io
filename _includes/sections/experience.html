@@ -1,0 +1,20 @@
+{%- assign ex = site.data.experience -%}
+{%- if ex.education or ex.experience -%}
+<section id="{{ include.section.id }}" class="section reveal" data-spy>
+  <h2 class="section-title">{{ include.section.title }}</h2>
+  <div class="two-col">
+    {%- if ex.education %}
+    <div>
+      <h3 class="col-title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h3>
+      {% include timeline.html items=ex.education %}
+    </div>
+    {%- endif %}
+    {%- if ex.experience %}
+    <div>
+      <h3 class="col-title"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</h3>
+      {% include timeline.html items=ex.experience %}
+    </div>
+    {%- endif %}
+  </div>
+</section>
+{%- endif -%}

@@ -1,0 +1,14 @@
+{%- assign all = site.data.publications | sort: "year" | reverse -%}
+{%- assign selected = all | where: "selected", true -%}
+{%- if selected.size == 0 -%}{%- assign selected = all | slice: 0, 3 -%}{%- endif -%}
+{%- if all.size > 0 -%}
+<section id="{{ include.section.id }}" class="section reveal" data-spy>
+  <h2 class="section-title">{{ include.section.title }}</h2>
+  <div class="pub-list">
+    {%- for pub in selected %}
+    {% include publication.html pub=pub show_year=true %}
+    {%- endfor %}
+  </div>
+  <a class="more-link" href="{{ '/publications/' | relative_url }}">All publications ({{ all.size }}) <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+</section>
+{%- endif -%}

@@ -1,0 +1,31 @@
+{%- assign p = site.data.profile -%}
+<section id="about" class="hero" data-spy>
+  <div class="hero-photo reveal">
+    <img src="{% include url.html href=p.photo %}" alt="Portrait of {{ p.name }}" width="220" height="220">
+  </div>
+  <div class="hero-text reveal">
+    <h1 class="hero-name">{{ p.name }}</h1>
+    <p class="hero-role">
+      {{ p.role }}
+      {%- if p.affiliation %} · {% if p.affiliation_url %}<a href="{{ p.affiliation_url }}">{{ p.affiliation }}</a>{% else %}{{ p.affiliation }}{% endif %}{% endif -%}
+      {%- if p.secondary_affiliation %} · {% if p.secondary_affiliation_url %}<a href="{{ p.secondary_affiliation_url }}">{{ p.secondary_affiliation }}</a>{% else %}{{ p.secondary_affiliation }}{% endif %}{% endif -%}
+    </p>
+    {%- if p.location %}
+    <p class="hero-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ p.location }}</p>
+    {%- endif %}
+    <div class="hero-bio">{{ p.bio | markdownify }}</div>
+    <div class="hero-actions">
+      {%- if p.cv and p.cv != "" %}
+      <a class="btn btn-primary" href="{% include url.html href=p.cv %}" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> CV</a>
+      {%- endif %}
+      {%- if p.email and p.email != "" %}
+      <a class="btn" href="mailto:{{ p.email }}"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Email</a>
+      {%- endif %}
+      <span class="hero-links">
+        {%- for l in p.links %}
+        <a href="{{ l.url }}" target="_blank" rel="noopener" aria-label="{{ l.name }}" title="{{ l.name }}"><i class="{{ l.icon }}" aria-hidden="true"></i></a>
+        {%- endfor %}
+      </span>
+    </div>
+  </div>
+</section>

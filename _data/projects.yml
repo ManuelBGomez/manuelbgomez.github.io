@@ -1,0 +1,25 @@
+# =============================================================================
+#  PROJECTS — research projects you take part in (e.g. at your workplace)
+#  Shown in this order. Only "name" is required.
+#    logo:  path inside the repo (e.g. assets/img/projects/myproject.png) or URL;
+#           without it a coloured tile with the project acronym is shown
+#    short: text for that tile (default: the name before "—" or ":")
+#    end:   leave empty or write "present" for ongoing projects
+# =============================================================================
+
+- name: "AZOR — Search, Location and Rescue of People on Land, and Fire Fighting and Prevention"
+  funder: "Civil UAVs Initiative: Fase B, Xunta de Galicia (Galicia, Spain) - Axencia Galega de Innovación (GAIN)"
+  role: "Researcher"
+  start: 2024
+  end: present
+  description: "The project addresses the development of an object detection system with RGB and thermal camera to be run on an FPGA on board a UAV for two use cases: (i) search, location and rescue of people on land; (ii) fire prevention and firefighting."
+  tags: ["Machine learning and reasoning", "Computer Vision"]
+  url: "https://citius.gal/en/research/projects/sistema-de-busqueda-localizacion-e-rescate-de-persoas-en-terra-e-prevencion-e-loita-contra-incendios/"
+
+- name: "REOPEN: Leveraging Artificial Intelligence for Robust Predictive Monitoring in Process Mining"
+  funder: "Ministerio de Ciencia e Innovación (Spain)"
+  role: "Researcher"
+  start: 2024
+  end: 2027
+  description: "The REOPEN project aims to improve predictive models for complex process mining by using generative models to address data issues like imbalances and anomalies. It also develops novel object detection and tracking models for video to extract activities from unstructured processes, validating them in domains like forest fires and logistics."
+  tags: ["Machine learning and reasoning", "Computer Vision"]

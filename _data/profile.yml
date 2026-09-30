@@ -1,0 +1,57 @@
+# =============================================================================
+#  PROFILE — the header of the home page ("About" section)
+# =============================================================================
+
+name: "Manuel Bendaña"
+initials: "MB"                      # shown in the browser tab icon
+role: "PhD Student"
+affiliation: "Centro Singular de Investigación en Tecnoloxías Intelixentes (CiTIUS)"
+affiliation_url: "https://citius.gal/en/"
+secondary_affiliation: "Universidade de Santiago de Compostela"   # optional, delete line if not needed
+secondary_affiliation_url: "https://www.usc.gal/en/"
+location: "Santiago de Compostela, Spain"            # optional
+photo: "assets/img/profile_manuel.webp"      # replace with e.g. assets/img/profile.jpg (square, ≥ 400×400 px)
+
+# Your name exactly as it appears in author lists. It is highlighted in bold in
+# publications. Add every variant you have published under.
+author_names:
+  - "Manuel Bendaña"
+  - "M. Bendaña"
+
+# Short biography. Markdown is allowed (**bold**, *italic*, [links](https://...)).
+# Leave a blank line between paragraphs.
+bio: |
+  I am a PhD student at [Universidade de Santiago de Compostela](https://www.usc.gal/en/) and a researcher at
+  [Centro Singular de Investigación en Tecnoloxías Intelixentes (CiTIUS)](https://citius.gal/en/), supervised by
+  [Prof. Manuel Mucientes](https://mucientes.pages.citius.gal/) and [Prof. Víctor M. Brea](https://citius.gal/en/team/victor-manuel-brea-sanchez/).
+
+  My research focuses on **Computer Vision**, more specifically on **Multiple Object Tracking (MOT)**, which is the 
+  core topic on my PhD. Before starting my PhD, I received an MSc in Computer Vision from Universidade de Santiago de Compostela.
+  Moreover, I have received a highly competitive *Formación de Profesorado Universitario (FPU)* grant from the Spanish Ministry of Universities to support my PhD studies.
+
+# Buttons under the bio. Remove the line (or leave it empty) to hide a button.
+cv: "assets/files/cv.pdf"
+email: "manuel.bendana.gomez@usc.es"
+
+# Icon links under the bio. Delete any you don't use; order is kept.
+# Icons: "fa-brands fa-github", "fa-brands fa-linkedin", "fa-brands fa-x-twitter",
+#        "fa-brands fa-bluesky", "ai ai-google-scholar", "ai ai-orcid",
+#        "ai ai-researchgate", "ai ai-dblp", "ai ai-semantic-scholar", "fa-solid fa-globe",
+#        "fa-solid fa-building-columns" (institution), "fa-solid fa-flask" (lab)
+#   Full lists: https://fontawesome.com/search?ic=free  ·  https://jpswalsh.github.io/academicons/
+links:
+  - name: Google Scholar
+    url: "https://scholar.google.com/citations?hl=gl&user=M8zlBqMAAAAJ"
+    icon: "ai ai-google-scholar"
+  - name: ORCID
+    url: "https://orcid.org/0009-0005-2437-065X"
+    icon: "ai ai-orcid"
+  - name: GitHub
+    url: "https://github.com/ManuelBGomez/"
+    icon: "fa-brands fa-github"
+  - name: LinkedIn
+    url: "https://www.linkedin.com/in/manuel-benda%C3%B1a-g%C3%B3mez-784590209/"
+    icon: "fa-brands fa-linkedin"
+  - name: Research centre profile
+    url: "https://citius.gal/en/team/manuel-bendana-gomez/"
+    icon: "fa-solid fa-building-columns"

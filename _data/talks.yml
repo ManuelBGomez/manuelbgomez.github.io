@@ -1,0 +1,55 @@
+# =============================================================================
+#  TALKS & TEACHING — two lists shown side by side
+#  talks.type: Talk | Invited talk | Poster | Tutorial | ...
+#  talks.links: same keys as in publications (slides, video, poster, ...)
+#  teaching.hours: optional number of teaching hours that year
+# =============================================================================
+
+talks:
+  - date: 2025-10-31
+    title: "Segmentation-Guided Association Refinement in Multiple Object Tracking"
+    event: "Doctoral Meeting"
+    location: "CiTIUS, Santiago de Compostela, Spain"
+    type: "Talk"
+    links:
+      website: "https://citius.gal/en/events/doctoral-meeting-segmentation-guided-association-refinement-in-multiple-object-tracking/"
+      video: "https://www.youtube.com/watch?v=Lusu1eIyRvg"
+
+  - date: 2025-07-03
+    title: "Enhancing Multi-Object Tracking with Segmentation Masks: A Solution for Lost Object Recovery"
+    event: "IbPRIA 2025 — 12th Iberian Conference on Pattern Recognition and Image Analysis"
+    location: "Coimbra, Portugal"
+    type: "Talk"
+    links:
+      website: "https://link.springer.com/chapter/10.1007/978-3-031-99565-1_6"
+
+teaching:
+  - course: "Automata Theory and Formal Languages (BSc in Computer Science)"
+    institution: "Universidade de Santiago de Compostela"
+    role: "Teaching assistant · lab sessions"
+    period: "2024-2025"
+    hours: 20
+    
+  - course: "Neural Networks and Deep Learning (BSc in Artificial Intelligence)"
+    institution: "Universidade de Santiago de Compostela"
+    role: "Teaching assistant · lab sessions"
+    period: "2024-2025"
+    hours: 40
+
+  - course: "Automata and Formal Languages (BSc in Artificial Intelligence)"
+    institution: "Universidade de Santiago de Compostela"
+    role: "Teaching assistant · lab sessions"
+    period: "2025-2026"
+    hours: 60
+
+  - course: "Automata Theory and Formal Languages (BSc in Computer Science)"
+    institution: "Universidade de Santiago de Compostela"
+    role: "Teaching assistant · lab sessions"
+    period: "2026-2027"
+    hours: 45
+    
+  - course: "Neural Networks and Deep Learning (BSc in Artificial Intelligence)"
+    institution: "Universidade de Santiago de Compostela"
+    role: "Teaching assistant · lab sessions"
+    period: "2026-2027"
+    hours: 15

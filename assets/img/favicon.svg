@@ -1,0 +1,7 @@
+---
+# Browser-tab icon: uses "initials" from _data/profile.yml and accent_color from _config.yml
+---
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="{{ site.accent_color | default: '#2f5bd3' }}"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#fff">{{ site.data.profile.initials }}</text>
+</svg>

@@ -1,0 +1,46 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+{%- comment -%} Full publication list. Content: _data/publications.yml {%- endcomment -%}
+{%- assign pubs = site.data.publications | sort: "year" | reverse -%}
+{%- assign by_year = pubs | group_by: "year" -%}
+{%- assign by_type = pubs | group_by: "type" -%}
+<section class="section page-top">
+  <h1 class="page-title">Publications</h1>
+  <p class="muted page-lead">
+    {{ pubs.size }} publications.
+    {%- assign scholar = site.data.profile.links | where: "name", "Google Scholar" | first -%}
+    {%- if scholar %} See also my <a href="{{ scholar.url }}" target="_blank" rel="noopener">Google Scholar profile</a>.{% endif %}
+  </p>
+
+  <div class="pub-toolbar">
+    <div class="filters" role="group" aria-label="Filter by type">
+      <button type="button" class="filter active" data-filter="all">All <span>{{ pubs.size }}</span></button>
+      {%- assign type_order = "journal,conference,workshop,preprint,thesis,other" | split: "," -%}
+      {%- for t in type_order %}
+        {%- assign g = by_type | where: "name", t | first -%}
+        {%- if g %}
+      <button type="button" class="filter" data-filter="{{ g.name }}">{{ g.name | capitalize }} <span>{{ g.size }}</span></button>
+        {%- endif -%}
+      {%- endfor %}
+    </div>
+    <label class="search">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input type="search" placeholder="Search title, author, venue…" data-pub-search aria-label="Search publications">
+    </label>
+  </div>
+
+  {%- for g in by_year %}
+  <div class="year-group" data-year-group>
+    <h2 class="year-title">{{ g.name }}</h2>
+    <div class="pub-list">
+      {%- for pub in g.items %}
+      {% include publication.html pub=pub %}
+      {%- endfor %}
+    </div>
+  </div>
+  {%- endfor %}
+  <p class="muted empty-msg" data-pub-empty hidden>No publications match your search.</p>
+</section>

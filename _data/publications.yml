@@ -1,0 +1,122 @@
+# =============================================================================
+#  PUBLICATIONS
+#  Order doesn't matter: they are grouped by year automatically.
+#
+#  Fields (only title, authors, venue, year and type are required):
+#    type:        journal | conference | workshop | preprint | thesis | other
+#    venue_short: short badge text (e.g. "NeurIPS", "IEEE TNNLS"); defaults to the type
+#    selected:    true → also shown on the home page
+#    note:        highlighted remark, e.g. "Best Paper Award", "Oral"
+#    status:      publication state shown after the venue, e.g. "In press", "Accepted"
+#                 (keep year as a number: it is used for sorting and grouping)
+#    authors:     your name is bolded automatically (see author_names in profile.yml);
+#                 add "*" for equal contribution, e.g. "Your Name*"
+#    links:       any of pdf, arxiv, doi, code, data, slides, poster, video, website.
+#                 Use full URLs or paths inside the repo (e.g. assets/files/paper.pdf).
+#                 For doi you can write just the identifier (10.xxxx/yyyy).
+#    bibtex:      paste the entry after "bibtex: |" indented by 4 spaces
+# =============================================================================
+
+- title: "Segmentation-guided association refinement in multiple object tracking"
+  authors: ["M. Bendaña", "V. M. Brea", "M. Mucientes"]
+  venue: "Neurocomputing, vol. 708, pp. 135176"
+  venue_short: "NEUCOM"
+  year: 2027
+  status: "Available online"
+  type: journal
+  selected: true
+  links:
+    doi: "10.1016/j.neucom.2026.135176"
+    pdf: "https://www.sciencedirect.com/science/article/pii/S0925231226025749"
+    code: "https://github.com/ManuelBGomez/SGAR-MOT"
+  bibtex: |
+    @article{BENDANA2027135176,
+      author = {Manuel Bendaña and Víctor M. Brea and Manuel Mucientes}
+      title = {Segmentation-guided association refinement in multiple object tracking},
+      journal = {Neurocomputing},
+      volume = {708},
+      pages = {135176},
+      year = {2027},
+      issn = {0925-2312},
+      doi = {10.1016/j.neucom.2026.135176},
+    }
+
+- title: "Live Demonstration: Transformer-Based Visual Object Detection and Tracking on MPSoC"
+  authors: ["M. Romero-Romero", "M. Bendaña", "P. Gil-Pérez", "D. Cores",
+            "F. Pardo", "V. M. Brea", "M. Mucientes"]
+  venue: "2026 IEEE International Symposium on Circuits and Systems "
+  venue_short: "ISCAS 2026"
+  year: 2026
+  type: conference
+  selected: false
+  note: "Demonstration"
+  links:
+    doi: "10.1109/ISCAS66217.2026.11562030"
+    pdf: "https://ieeexplore.ieee.org/document/11562030"
+  bibtex: |
+    @inproceedings{RomeroRomeroBGCPBM26,
+      author       = {M. Romero{-}Romero and
+                      Manuel Benda{\~{n}}a and
+                      Pablo Gil{-}P{\'{e}}rez and
+                      Daniel Cores and
+                      Fernando Pardo and
+                      V{\'{\i}}ctor M. Brea and
+                      Manuel Mucientes},
+      title        = {Live Demonstration: Transformer-Based Visual Object Detection and
+                      Tracking on MPSoC},
+      booktitle    = {{IEEE} International Symposium on Circuits and Systems, {ISCAS} 2026,
+                      Shanghai, China, May 24-28, 2026},
+      pages        = {1677},
+      publisher    = {{IEEE}},
+      year         = {2026},
+      doi          = {10.1109/ISCAS66217.2026.11562030},
+    }
+
+- title: "Enhancing Multi-object Tracking with Segmentation Masks: A Solution for Lost Object Recovery"
+  authors: ["M. Bendaña", "L. Vaquero", "V. M. Brea", "M. Mucientes"]
+  venue: "12th Iberian Conference on Pattern Recognition and Image Analysis"
+  venue_short: "IbPRIA 2025"
+  year: 2025
+  type: conference
+  selected: true
+  note: "Oral presentation"
+  links:
+    doi: "10.1007/978-3-031-99565-1_6"
+    pdf: "https://mucientes.pages.citius.gal/pubs/Bendana25_ibpria.pdf"
+  bibtex: |
+    @inproceedings{BendanaVBM25,
+      author       = {Manuel Benda{\~{n}}a and
+                      Lorenzo Vaquero and
+                      V{\'{\i}}ctor M. Brea and
+                      Manuel Mucientes},
+      title        = {Enhancing Multi-object Tracking with Segmentation Masks: {A} Solution
+                      for Lost Object Recovery},
+      booktitle    = {Pattern Recognition and Image Analysis - 12th Iberian Conference,
+                      IbPRIA 2025, Coimbra, Portugal, June 30 - July 3, 2025, Proceedings,
+                      Part {I}},
+      series       = {Lecture Notes in Computer Science},
+      volume       = {15937},
+      pages        = {68--79},
+      publisher    = {Springer},
+      year         = {2025},
+      doi          = {10.1007/978-3-031-99565-1\_6}
+    }
+
+- title: "Addressing Multiple Object Tracking with Segmentation Masks"
+  authors: ["M. Bendaña", "V. M. Brea", "M. Mucientes"]
+  venue: "MSc Thesis (Master in Computer Vision), Universidade de Santiago de Compostela"
+  venue_short: "MSc Thesis"
+  year: 2024
+  type: thesis
+  links:
+    pdf: "https://minerva.usc.gal/entities/publication/1ef509c8-00d5-4a97-be4e-e176d9a85a05"
+
+- title: "Tracking de objetos utilizando información de distractores (Object Tracking using Distractor Information)"
+  authors: ["M. Bendaña", "L. Vaquero", "M. Mucientes"]
+  venue: "BSc Thesis (BSc Degree in Computer Science), Universidade de Santiago de Compostela"
+  venue_short: "BSc Thesis"
+  year: 2022
+  type: thesis
+  links:
+    pdf: "https://minerva.usc.gal/entities/publication/2e42aefc-4cf1-42f5-9788-4919586cf051"
+

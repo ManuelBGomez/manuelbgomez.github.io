@@ -1,0 +1,20 @@
+{%- assign items = site.data.news | sort: "date" | reverse -%}
+{%- assign limit = site.news_limit | default: 5 -%}
+{%- if items.size > 0 -%}
+<section id="{{ include.section.id }}" class="section reveal" data-spy>
+  <h2 class="section-title">{{ include.section.title }}</h2>
+  <ul class="news">
+    {%- for n in items %}
+    <li class="news-item"{% if forloop.index > limit %} data-extra hidden{% endif %}>
+      <time datetime="{{ n.date | date: '%Y-%m-%d' }}">{{ n.date | date: "%b %Y" }}</time>
+      <div class="news-text">{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- if items.size > limit %}
+  <button type="button" class="more-btn" data-news-more aria-expanded="false">
+    <span class="more-label">Show all {{ items.size }} news</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </button>
+  {%- endif %}
+</section>
+{%- endif -%}

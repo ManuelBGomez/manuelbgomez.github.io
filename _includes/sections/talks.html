@@ -1,0 +1,41 @@
+{%- assign d = site.data.talks -%}
+{%- if d.talks or d.teaching -%}
+<section id="{{ include.section.id }}" class="section reveal" data-spy>
+  <h2 class="section-title">{{ include.section.title }}</h2>
+  <div class="two-col">
+    {%- if d.talks %}
+    <div>
+      <h3 class="col-title"><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i> Talks &amp; posters</h3>
+      <ul class="plain-list">
+        {%- assign talks = d.talks | sort: "date" | reverse -%}
+        {%- for t in talks %}
+        <li>
+          <div class="item-head">
+            <time datetime="{{ t.date | date: '%Y-%m-%d' }}">{{ t.date | date: "%b %Y" }}</time>
+            {%- if t.type %}<span class="badge">{{ t.type }}</span>{% endif %}
+          </div>
+          <h4>{{ t.title }}</h4>
+          <p class="muted">{{ t.event }}{% if t.location %} · {{ t.location }}{% endif %}</p>
+          {%- if t.links %}<div class="pub-links">{% include links.html links=t.links %}</div>{% endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+    {%- if d.teaching %}
+    <div>
+      <h3 class="col-title"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i> Teaching</h3>
+      <ul class="plain-list">
+        {%- for c in d.teaching %}
+        <li>
+          <div class="item-head"><span class="muted">{{ c.period }}</span></div>
+          <h4>{{ c.course }}</h4>
+          <p class="muted">{{ c.role }}{% if c.hours %} · {{ c.hours }} h{% endif %}{% if c.institution %} · {{ c.institution }}{% endif %}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+  </div>
+</section>
+{%- endif -%}

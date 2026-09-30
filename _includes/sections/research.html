@@ -1,0 +1,21 @@
+{%- assign research = site.data.research -%}
+{%- if research.interests.size > 0 -%}
+<section id="{{ include.section.id }}" class="section reveal" data-spy>
+  <h2 class="section-title">{{ include.section.title }}</h2>
+  {%- if research.intro %}
+  <div class="section-intro">{{ research.intro | markdownify }}</div>
+  {%- endif %}
+  <div class="card-grid research-grid">
+    {%- for r in research.interests %}
+    <article class="card research-card{% if r.featured %} featured{% endif %}">
+      <div class="research-head">
+        {%- if r.icon %}<div class="research-icon"><i class="{{ r.icon }}" aria-hidden="true"></i></div>{% endif %}
+        {%- if r.label %}<span class="research-label">{{ r.label }}</span>{% endif %}
+      </div>
+      <h3>{{ r.title }}</h3>
+      <p>{{ r.description }}</p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif -%}

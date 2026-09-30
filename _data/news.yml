@@ -1,0 +1,22 @@
+# =============================================================================
+#  NEWS — newest first. Markdown is allowed in "text".
+#  date format: YYYY-MM-DD (only month and year are shown)
+# =============================================================================
+
+- date: 2026-09-10
+  text: "Our paper *Placeholder Title for a Conference Paper* was accepted at **Conference 2026**! 🎉"
+
+- date: 2026-07-02
+  text: "Presented a poster at the [Summer School on Topic](https://example.org)."
+
+- date: 2026-03-15
+  text: "Started a research stay at [Partner University](https://example.org)."
+
+- date: 2025-11-20
+  text: "Our first journal article was published in *Journal of Something*."
+
+- date: 2025-06-01
+  text: "Joined the [Project Acronym](https://example.org) project as a researcher."
+
+- date: 2024-10-01
+  text: "Started my PhD at University Name."

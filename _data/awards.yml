@@ -1,0 +1,37 @@
+# =============================================================================
+#  AWARDS & GRANTS — any order; shown grouped (awards, then grants), newest first.
+#  description is optional.
+#  type: award | grant  (defaults to award)
+# =============================================================================
+
+- year: 2023
+  title: "Formación del Profesorado Universitario (FPU) Predoctoral Research Grant"
+  type: grant
+  org: "Ministry of Universities, Spain"
+  description: "Highly competitive national call"
+
+- year: 2021
+  title: "Collaboration Grant"
+  type: grant
+  org: "Ministry of Education, Spain"
+  
+- year: 2025
+  title: "MSc in Computer Vision: Best Thesis Award, Extraordinary Award and Top Academic Record"
+  type: award
+  org: "Escola Técnica Superior de Enxeñaría, Universidade de Santiago de Compostela"
+
+- year: 2023
+  title: "BSc in Computer Science: Extraordinary Award and Top Academic Record"
+  type: award
+  org: "Escola Técnica Superior de Enxeñaría, Universidade de Santiago de Compostela"
+
+- year: 2023
+  title: "Extraordinary Graduation Award (BSc in Computer Science)"
+  type: award
+  org: "Xunta de Galicia, Spain"
+
+- year: 2020 & 2021
+  title: "Academic Excellence Awards (academic years 2018/2019 and 2019/2020)"
+  type: award
+  org: "Xunta de Galicia, Spain"
+
