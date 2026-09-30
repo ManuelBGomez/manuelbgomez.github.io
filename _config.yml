@@ -6,6 +6,7 @@
 
 # Used for the browser tab, search engines and link previews.
 title: "Manuel Bendaña"
+tagline: "PhD Student"   # home page tab title: "<title> | <tagline>"
 description: "PhD student in computer vision: multi-object tracking, object detection and segmentation."
 lang: en
 
@@ -65,6 +66,7 @@ plugins:
 
 exclude:
   - README.md
+  - GUIDE.md
   - Gemfile
   - Gemfile.lock
   - docker-compose.yml
